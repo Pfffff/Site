@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+
+	<link href="{{request.static_url('armycommander:static/css/normalize.css')}}" rel="stylesheet">
+	<link href="{{request.static_url('armycommander:static/css/allsettings.css')}}" rel="stylesheet">
+
+	<title>Summer Game | Rating</title>
+</head>
+<body>
+
+
+{% if username=="admino" %}  
+    <label >{{username}}</label>
+    <a style="float: right;" href="logout">Sign out</a>
+    
+{% else %}
+    <a style="float: right;" href="login">Sign in</a>
+{% endif %}
+
+	<header >
+		<img src="{{request.static_url('armycommander:static/image/headerPic.jpg')}}">
+		<ul>
+		    <li><a href="home">Главная</a></li>
+		    <li><a href="guide">Гайд</a></li>
+		    <li><a href="map">Карты</a></li>
+		    <li class="selected"><a href="rating">Рейтинг</a></li>
+<li><a href="workwithdatabase">Добавление данных</a></li>
+		</ul>
+	</header>
+
+<div class="content">
+
+
+
+<table align="center">
+<caption style="font-size:2em; margin-bottom: 30px; margin-top: 20px" ><label>Ratings</label></caption>
+{% for top in TopRating %}
+  <th align="center"><label>{{ top.map.name }}</label></th>
+
+  <tr><td>{{ top.first_user_name }}</td></tr>
+  <tr><td>{{ top.second_user_name }}</td></tr>
+  <tr><td>{{ top.third_user_name }}</td></tr>
+  
+{% endfor %}
+</table>
+
+
+
+
+</div>
+
+
+	<footer>
+		<div class="follow"> 
+			<div><p>Следите за нами здесь: </p></div>
+			<div>
+				<a href="http://www.vk.com"><img src="{{request.static_url('armycommander:static/image/vkr48.png')}}"></a>
+				<a href="http://www.facebook.com"><img src="{{request.static_url('armycommander:static/image/fbr48.png')}}"></a>
+				<a href="http://www.twitter.com"><img src="{{request.static_url('armycommander:static/image/tr48.png')}}"></a>
+				<a href="http://www.google.com"><img src="{{request.static_url('armycommander:static/image/gpr48.png')}}"></a>
+			</div>
+		</div>
+		<p>© 2015 Зуева Галина</p>
+	</footer>
+
+
+
+</body>
+</html>

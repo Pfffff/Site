@@ -1,0 +1,179 @@
+body
+{
+	width: 806px;
+	margin: 0 auto;
+}
+
+header
+{
+	height: 224px;
+	text-align: center;
+	font-size: 0;
+	margin-bottom: 40px 
+}
+
+header > ul
+{
+	padding: 0px;
+	list-style: none;
+	height: 70px;
+	width: 806px;
+	display: inline-block;
+    font-size: 0; /* убираем нежелательные отсутпы у дочерних элементов (для display) */
+    border-bottom: 4px solid #d3660d;
+}
+
+header > ul > li
+{
+	margin-top: 10px; /*отступ li сверху на 10*/
+	margin-bottom: 10px; /*отступ li снизу на 10*/
+	right: 200px;
+	float: left; 
+	height: 61px;
+	width: 159px;
+	border-left: 2px solid #d3660d; /*разделитель между меню*/
+}
+
+header > ul > li.selected > a
+{	
+	background-color: #e7d4d5;
+}
+
+header > ul > li:first-child /*первый элемент li */
+{ 
+	border: none;
+} 
+
+header > ul > li > a
+{ 
+	text-align: center;
+	color: #d3660d;
+	font-size: 24px;
+	width: 160px;
+	height: 100%; /* чтобы ссылка была по всему li, а не только высота текста ссылки*/
+	display: inline-block; /*делаем её встроенным-блоным элементом. Изначально ссылка - */
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
+} 
+
+header > ul > li > a:hover
+{
+	background-color: #efe299;
+}
+
+div.content
+{
+	min-height: 500px;
+}
+
+div.leftContent > div > h1
+{
+	color: #e4951e;
+}
+
+div.rightContent > div > h1
+{
+	color: #e4951e;
+}
+
+img.newsImg
+{
+	margin-bottom: 10px;
+}
+
+div.rightContent > img.newsImg
+{
+	margin-left: 30px;
+}
+
+div.leftContent > img.newsImg
+{
+	margin-right: 30px;
+}
+
+hr
+{
+	border-width: 2px;
+	color: #8d8794; 
+}
+ 
+div.leftMenu
+{
+	width: 150px;
+	float: left;
+}
+
+div.leftMenu > ul
+{
+	list-style: disc;
+}
+
+div.leftMenu > ul > li > a
+{
+	text-align: center;
+	font-size: 16px;
+	color: #d3660d;
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+div.leftMenu > ul > li > a:hover
+{
+	color: #efe299;
+}
+
+div.leftMenu + div.content /*выбрать див.контент, который следует строго за див.лефтменю*/
+{
+	 margin-left: 150px;
+}
+
+footer 
+{
+	height: 120px;
+	background-color: #e7d4d5;
+}
+
+footer > div.follow
+{
+	height: 48px;
+	width: 464px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+footer > div.follow > div
+{
+	float: left;
+}
+
+footer > div.follow > div > a
+{
+	margin-left: 10px;
+}
+
+footer > p 
+{
+	text-align: center;
+}
+
+form.DBform
+{
+	margin: 100px;
+}
+
+div.scroll-table {
+  width: 90%;
+  overflow: auto;
+  height: 300px;
+}
+
+
+th 
+{
+	padding: 20px 50px;
+	font-size: 1.2em;
+}
+
+td
+{
+	padding: 7px;
+}
