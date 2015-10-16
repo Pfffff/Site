@@ -4,7 +4,7 @@ ArmyCommander README
 Getting Started
 ---------------
 
-- cd <directory containing this file>
+- cd [directory containing this file]
 
 - $VENV/bin/python setup.py develop
 
