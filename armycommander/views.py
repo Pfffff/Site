@@ -27,23 +27,23 @@ forget,
 
 from .security import USERS
 
-@view_config(route_name='home', renderer='templates/home.jinja2')
+@view_config(route_name='home', renderer='/root/galya-py/armycommander/templates/home.jinja2')
 def home(request):
    if request.authenticated_userid == "admino":
     	return {'username': request.authenticated_userid, 'project': 'ArmyCommander'}
    return {'project': 'ArmyCommander'}
 
-@view_config(route_name='map', renderer='templates/map.jinja2')
+@view_config(route_name='map', renderer='/root/galya-py/armycommander/templates/map.jinja2')
 def maps(request):
     if request.authenticated_userid == "admino":
     	return {'username': request.authenticated_userid, 'project': 'ArmyCommander'}
     return {'project': 'ArmyCommander'}
 
-@view_config(route_name='guide', renderer='templates/guide.jinja2')
+@view_config(route_name='guide', renderer='/root/galya-py/armycommander/templates/guide.jinja2')
 def guide(request):
     return {'username': request.authenticated_userid, 'project': 'ArmyCommander'}
 
-@view_config(route_name='rating', renderer='templates/rating.jinja2')
+@view_config(route_name='rating', renderer='/root/galya-py/armycommander/templates/rating.jinja2')
 def rating(request):
     try:
 	maps = DBSession.query(Map).all()
@@ -56,7 +56,7 @@ def rating(request):
 
 
 @view_config(route_name='editdatabase', context='.models.AccessGroups',
- renderer='templates/workwithdatabase.jinja2', permission='edit')
+ renderer='/root/galya-py/armycommander/templates/workwithdatabase.jinja2', permission='edit')
 def edit_db(request):
     try:
         players = DBSession.query(Player).all() 
@@ -100,8 +100,8 @@ After you fix the problem, please restart the Pyramid application to
 try it again.
 """
 
-@view_config(route_name='login', renderer='templates/loginform.jinja2')
-@forbidden_view_config(renderer='templates/loginform.jinja2')
+@view_config(route_name='login', renderer='/root/galya-py/armycommander/templates/loginform.jinja2')
+@forbidden_view_config(renderer='/root/galya-py/armycommander/templates/loginform.jinja2')
 def login(request):
     	if 'submitted' in request.params:
         	login = request.params['login']
